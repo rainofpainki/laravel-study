@@ -78,6 +78,13 @@
             @endif
 
             <div class="content">
+                <ul>
+                  @forelse($items as $item)
+                    <li>{{ $item }}</li>
+                  @empty
+                    <li>엥~ 아무것도 없는데요!</li>
+                  @endforelse
+                </ul>
                 <div class="title m-b-md">
                     Laravel
                 </div>

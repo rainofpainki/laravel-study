@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  $items = ['apple', 'banana', 'tomato'];
+
+  return view('welcome', [
+    'items' => $items,
+  ]);
 });
 
 Auth::routes();
@@ -29,3 +33,8 @@ Route::get('/home', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//
+// Route::get('/{foo?}', function ($foo='bar') {
+//     return $foo;
+// });
