@@ -42,11 +42,11 @@
   <body id="app-layout">
 
     <div class="container">
-      @include('flash::message')
+      {{--@include('flash::message')--}}
 
       @yield('content')
     </div>
-    
+
 
     <script src="{{ elixir('js/app.js') }}"></script>
     @yield('script')
